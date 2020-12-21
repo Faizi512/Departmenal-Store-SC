@@ -38,8 +38,8 @@ public static User user = null;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-          String[] opt = {"moazzam","maheem","maryam","bano","nasir","bilal","imran"}; 
-      TextFields.bindAutoCompletion(username, opt);
+          String[] opt = {"Faizan","moazzam","maheem","maryam","bano","nasir","bilal","imran"}; 
+          TextFields.bindAutoCompletion(username, opt);
     //    password =  TextFields.createClearableTextField();
     }    
     
@@ -75,16 +75,20 @@ public static User user = null;
   }
        
     public boolean authentication(){
-        ArrayList<User> u = Modal.RegisterUser.User.getAllUsersRecord();
-        for (int i = 0; i < u.size(); i++) {
-            if (username.getText().equals(u.get(i).getUser_Name()) && password.getText().equals(u.get(i).getPassword())) {
-                user = u.get(i);
-                break;
-            }
-        }
-        if(user != null){
-            return true;
-        }
-        return false;
+        return true;
+//        ArrayList<User> u = Modal.RegisterUser.User.getAllUsersRecord();
+//        for(User element: u){
+//            System.out.println("-------------"+element.getName()+element.getPassword()+"-------------");
+//        }
+//        for (int i = 0; i < u.size(); i++) {
+//            if (username.getText().equals(u.get(i).getUser_Name()) && password.getText().equals(u.get(i).getPassword())) {
+//                user = u.get(i);
+//                break;
+//            }
+//        }
+//        if(user != null){
+//            return true;
+//        }
+//        return false;
     }      
 }

@@ -92,11 +92,11 @@ public class MainSceneController implements Initializable {
           @FXML
     public void getSalesInvoicePage(ActionEvent e) throws IOException{
         
-         Parent  mainscene = FXMLLoader.load(getClass().getResource("/GUI/SalesInvoice/SalesInvoice.fxml"));
+        Parent  mainscene = FXMLLoader.load(getClass().getResource("/GUI/SalesInvoice/SalesInvoice.fxml"));
             Scene MainScene = new Scene(mainscene);
         Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
         window.resizableProperty().setValue(Boolean.FALSE);
-        window.setTitle("Sales Invoice");
+        window.setTitle("Repots");
         window.setScene(MainScene);
         window.show();
         

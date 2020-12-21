@@ -37,7 +37,7 @@ public class ForgetPasswordController implements Initializable {
         // TODO
     }    
     public void verify(ActionEvent e) throws IOException{
-        if(username.getText().matches("moazzam")){
+        if(username.getText().equalsIgnoreCase("Faizan")){
             Parent  mainscene = FXMLLoader.load(getClass().getResource("/GUI/Capcha/eCapcha.fxml"));
             Scene MainScene = new Scene(mainscene);
             Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
