@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="742.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PurchaseInvoice.PurchaseInvoiceController">
+    <stylesheets>
+        <URL value="@purchaseinvoice.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="13.0" layoutY="62.0" prefHeight="284.0" prefWidth="575.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0">
+         <children>
+            <ScrollPane layoutX="339.0" layoutY="18.0" prefHeight="249.0" prefWidth="364.0">
+               <content>
+                  <TableView fx:id="PITable" prefHeight="249.0" prefWidth="690.0">
+                    <columns>
+                      <TableColumn fx:id="SerialNo" prefWidth="75.0" text="Serial_No" />
+                      <TableColumn fx:id="Category" prefWidth="75.0" text="Category" />
+                        <TableColumn fx:id="Product" prefWidth="75.0" text="Product" />
+                        <TableColumn fx:id="Date" prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="Time" prefWidth="75.0" text="Time" />
+                        <TableColumn fx:id="Desc" prefWidth="75.0" text="Decs" />
+                        <TableColumn fx:id="Supplier" prefWidth="75.0" text="Supplier" />
+                        <TableColumn fx:id="Address" prefWidth="75.0" text="Address" />
+                        <TableColumn fx:id="ApprovedBy" prefWidth="90.0" text="Approved By" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <JFXComboBox fx:id="product" layoutX="115.0" layoutY="60.0" prefHeight="25.0" prefWidth="167.0" promptText="Product" />
+            <JFXComboBox fx:id="category" layoutX="115.0" layoutY="35.0" prefHeight="25.0" prefWidth="167.0" promptText="Category" />
+            <JFXTextField fx:id="description" layoutX="118.0" layoutY="159.0" prefHeight="25.0" prefWidth="167.0" promptText="Description" />
+            <Separator layoutX="313.0" layoutY="35.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="5.0" />
+            <DatePicker fx:id="date" layoutX="114.0" layoutY="101.0" promptText="Select Date" showWeekNumbers="true" />
+            <JFXComboBox fx:id="timeh" layoutX="99.0" layoutY="127.0" prefHeight="25.0" prefWidth="58.0" promptText="Hour" />
+            <JFXComboBox fx:id="timem" layoutX="163.0" layoutY="127.0" prefHeight="25.0" prefWidth="67.0" promptText="Minute" />
+            <JFXComboBox fx:id="time" layoutX="237.0" layoutY="127.0" prefHeight="25.0" prefWidth="74.0" promptText="AM" />
+            <JFXTextField fx:id="supplier" layoutX="118.0" layoutY="189.0" prefHeight="25.0" prefWidth="167.0" promptText="Supplier" />
+            <JFXTextField fx:id="address" layoutX="118.0" layoutY="221.0" prefHeight="25.0" prefWidth="167.0" promptText="Address" />
+            <JFXTextField fx:id="approvedby" layoutX="117.0" layoutY="250.0" prefHeight="25.0" prefWidth="167.0" promptText="Approved By" />
+            <Label layoutX="14.0" layoutY="187.0" prefHeight="25.0" prefWidth="100.0" text="Supplier:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="219.0" prefHeight="25.0" prefWidth="100.0" text="Address:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="250.0" prefHeight="25.0" prefWidth="100.0" text="Approved By:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="58.0" prefHeight="25.0" prefWidth="100.0" text="Product:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="99.0" prefHeight="25.0" prefWidth="100.0" text="Date:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="100.0" text="Time:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="157.0" prefHeight="25.0" prefWidth="100.0" text="Description:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="33.0" prefHeight="25.0" prefWidth="100.0" text="Category:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="25.0" prefWidth="100.0" text="Invoice#">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="invoice" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="167.0" />
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="28.0" layoutY="18.0" prefHeight="40.0" prefWidth="683.0" text="Purchase Invoice" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="181.0" layoutY="362.0" prefHeight="34.0" prefWidth="377.0" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="184.0" AnchorPane.topAnchor="362.0">
+         <children>
+            <JFXButton onAction="#Save" prefHeight="32.0" prefWidth="94.0" text="Save">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#Update" prefHeight="32.0" prefWidth="94.0" text="Update">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#Delete" prefHeight="32.0" prefWidth="94.0" text="Delete">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#Back" prefHeight="32.0" prefWidth="94.0" text="Go Back">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></JFXButton>
+         </children>
+      </HBox>
+      <Separator layoutX="52.0" layoutY="352.0" prefHeight="3.0" prefWidth="636.0" />
+   </children>
+</AnchorPane>

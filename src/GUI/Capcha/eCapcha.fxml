@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="405.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Capcha.ECapchaController">
+    <stylesheets>
+        <URL value="@ecapcha.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="367.0" fitWidth="516.0" layoutX="-25.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/images.jpg" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="59.0" fitWidth="185.0" layoutX="16.0" layoutY="74.0" opacity="0.77" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Untitled-2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="50.0" prefHeight="23.0" prefWidth="179.0" text="E-Capcha">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="76.0" prefHeight="30.0" prefWidth="12.0" rotate="26.6" text="A" textFill="#4813da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="76.0" prefHeight="17.0" prefWidth="12.0" rotate="131.2" text="B" textFill="#4813da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="76.0" rotate="-79.7" text="9" textFill="#4813da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="76.0" rotate="56.3" text="D" textFill="#4813da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="76.0" rotate="-153.4" text="E" textFill="#4813da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="168.0" layoutY="76.0" rotate="146.3" text="2" textFill="#4813da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="180.0" prefHeight="23.0" prefWidth="205.0" text="Enter e-capcha from the picture">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="eCapcha" layoutX="14.0" layoutY="210.0" prefHeight="25.0" prefWidth="167.0" promptText="e-capcha" />
+      <Button disable="true" layoutX="14.0" layoutY="145.0" mnemonicParsing="false" text="Reload" />
+      <Button disable="true" layoutX="78.0" layoutY="145.0" mnemonicParsing="false" text="Speak" />
+      <Button layoutX="72.0" layoutY="248.0" mnemonicParsing="false" onAction="#newPassword" text="Enter" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainScene.MainSceneController">
+    <stylesheets>
+        <URL value="@mainscene.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="531.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Pics/2.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <MenuBar prefHeight="25.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="chartofaccounts" contentDisplay="TOP" layoutX="242.0" layoutY="148.0" mnemonicParsing="false" onAction="#getChartofAccounts" prefHeight="70.0" prefWidth="126.0" style="-fx-background-color: Cyan;" text="Chart of Accounts">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/accounts.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="inventory" contentDisplay="TOP" layoutX="387.0" layoutY="55.0" mnemonicParsing="false" onAction="#getInventoryPage" prefHeight="70.0" prefWidth="126.0" style="-fx-background-color: Magenta;" text="Inventory">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/inventoy.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="salesinvoice" contentDisplay="TOP" layoutX="387.0" layoutY="133.0" mnemonicParsing="false" onAction="#getSalesInvoicePage" prefHeight="70.0" prefWidth="126.0" style="-fx-background-color: Yellow;" text="Sales Invoice">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/sales.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="purchaseinvoice" contentDisplay="TOP" layoutX="385.0" layoutY="218.0" mnemonicParsing="false" onAction="#getPurchaseInvoicePage" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: GreenYellow;" text="Purchase Invoice">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/purchase.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="user" contentDisplay="TOP" layoutX="385.0" layoutY="305.0" mnemonicParsing="false" onAction="#getUserAccessPage" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: Orange;" text="Users">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/users.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="logout" contentDisplay="TOP" layoutX="385.0" layoutY="393.0" mnemonicParsing="false" onAction="#getLoginPage" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: Cyan;" styleClass="mainFxmlClass" stylesheets="@mainscene.css" text="Log Out">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/logOut.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="reports" contentDisplay="TOP" layoutX="238.0" layoutY="262.0" mnemonicParsing="false" onAction="#getRepotsPage" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: Magenta;" text="Reporting">
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/reporting.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

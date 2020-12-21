@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="602.0" style="-fx-background-color: #e3f2fd;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddUsers.UserController">
+    <stylesheets>
+        <URL value="@user.css" />
+    </stylesheets>
+   <children>
+      <JFXScrollPane layoutX="307.0" layoutY="7.0" prefHeight="384.0" prefWidth="285.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <JFXListView fx:id="List" prefHeight="381.0" prefWidth="285.0" />
+         </children>
+      </JFXScrollPane>
+      <Pane layoutX="10.0" layoutY="9.0" prefHeight="384.0" prefWidth="285.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="9.0">
+         <children>
+            <JFXTextField fx:id="name" labelFloat="true" layoutX="103.0" layoutY="80.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter Name" />
+            <JFXTextField fx:id="email" layoutX="103.0" layoutY="156.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter E-mail Address" />
+            <JFXTextField fx:id="phone" labelFloat="true" layoutX="103.0" layoutY="121.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter Phone Number" />
+            <JFXComboBox fx:id="designation" layoutX="103.0" layoutY="249.0" prefHeight="25.0" prefWidth="160.0" promptText="Select Designation" />
+            <Separator layoutX="18.0" layoutY="372.0" prefHeight="3.0" prefWidth="244.0" />
+            <VBox alignment="CENTER" layoutX="41.0" layoutY="382.0" prefHeight="86.0" prefWidth="197.0" style="-fx-background-color: #e8eaf6;">
+               <children>
+                  <JFXButton onAction="#Save" prefHeight="25.0" prefWidth="180.0" text="Save" textAlignment="CENTER" />
+                  <JFXButton onAction="#Delete" prefHeight="25.0" prefWidth="191.0" text="Delete" />
+                  <JFXButton onAction="#Back" prefHeight="25.0" prefWidth="191.0" text="Back" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="21.0" layoutY="6.0" prefHeight="33.0" prefWidth="237.0" text="User Registration Form" textAlignment="CENTER">
+               <font>
+                  <Font name="Monotype Corsiva" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="address" layoutX="103.0" layoutY="192.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter Home Address" />
+            <JFXTextField fx:id="city" layoutX="103.0" layoutY="217.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter City" />
+            <Label fx:id="id" layoutX="104.0" layoutY="51.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="8.0" layoutY="80.0" prefHeight="25.0" prefWidth="82.0" text="Name:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="117.0" prefHeight="25.0" prefWidth="82.0" text="Phone_No:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="152.0" prefHeight="25.0" prefWidth="93.0" text="E-Mail Address:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="188.0" prefHeight="25.0" prefWidth="82.0" text="Address:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="213.0" prefHeight="25.0" prefWidth="82.0" text="City:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="245.0" prefHeight="25.0" prefWidth="82.0" text="Designation:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="51.0" prefHeight="25.0" prefWidth="82.0" text="ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="username" layoutX="108.0" layoutY="309.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter User Name" />
+            <Label layoutX="11.0" layoutY="309.0" prefHeight="25.0" prefWidth="82.0" text="User Name:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="341.0" prefHeight="25.0" prefWidth="82.0" text="Password:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="password" layoutX="107.0" layoutY="341.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter Password" />
+            <JFXTextField fx:id="posID" layoutX="104.0" layoutY="284.0" prefHeight="25.0" prefWidth="160.0" promptText="Enter Point of Sale ID" />
+            <Label layoutX="11.0" layoutY="284.0" prefHeight="25.0" prefWidth="82.0" text="POS ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

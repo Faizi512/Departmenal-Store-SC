@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+       
+         <property name="connection.url">jdbc:mysql://localhost:3306/x5</property> 
+        
+
+        
+        <property name="hbm2ddl.auto">update</property>
+        
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+    	
+    	<property name="show_sql">true</property>
+    	
+    	<mapping class="Levels.Level1"/>
+    	<mapping class="Levels.Level2"/>
+    	<mapping class="Levels.Level3"/>
+    	<mapping class="Levels.Level4"/>
+    	<mapping class="Transcations.Purchase_Invoice"/>
+    	<mapping class="Transcations.Daily_Transcations"/>
+    
+    </session-factory>
+</hibernate-configuration>

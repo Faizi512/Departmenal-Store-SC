@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="1184.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SalesInvoice.SalesInvoiceController">
+    <stylesheets>
+        <URL value="@salesinvoice.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="34.0" prefWidth="1159.0" text="Sales Invoice">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="747.0" layoutY="83.0" prefHeight="315.0" prefWidth="419.0">
+         <content>
+            <TableView fx:id="ProductTable" prefHeight="316.0" prefWidth="1547.0">
+               <columns>
+                  <TableColumn fx:id="SerialNo" prefWidth="100.0" text="Serial No" />
+                  <TableColumn fx:id="TransID" minWidth="0.0" prefWidth="100.0" text="Trans_ID" />
+                  <TableColumn fx:id="Pcode" minWidth="1.0" prefWidth="100.0" text="Product Code" />
+                  <TableColumn fx:id="Pname" prefWidth="100.0" text="Product Name" />
+                  <TableColumn fx:id="Brand" prefWidth="100.0" text="Brand" />
+                  <TableColumn fx:id="Supplier" prefWidth="100.0" text="Supplier" />
+                  <TableColumn fx:id="SPrice" prefWidth="100.0" text="Sale Price" />
+                  <TableColumn fx:id="PPrice" prefWidth="100.0" text="Purchase Price" />
+                  <TableColumn fx:id="AvalStock" prefWidth="100.0" text="Available Stock" />
+                  <TableColumn fx:id="CriticalStock" prefWidth="100.0" text="Critical Stock" />
+                  <TableColumn fx:id="ManDate" prefWidth="150.0" text="Manufacture Date" />
+                  <TableColumn fx:id="ExDate" prefWidth="100.0" text="Expiry Date" />
+                  <TableColumn fx:id="uom" prefWidth="100.0" text="UOM" />
+                  <TableColumn fx:id="Status" prefWidth="100.0" text="Status" />
+                  <TableColumn fx:id="date" prefWidth="100.0" text="Date" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" layoutX="19.0" layoutY="497.0" prefHeight="27.0" prefWidth="419.0" spacing="5.0">
+         <children>
+            <JFXButton onAction="#Save" prefHeight="25.0" prefWidth="88.0" text="Save">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#clearAll" prefHeight="25.0" prefWidth="88.0" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#Back" prefHeight="25.0" prefWidth="88.0" text="Go Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="14.0" layoutY="90.0" prefHeight="275.0" prefWidth="228.0">
+         <children>
+            <Label layoutX="14.0" layoutY="109.0" prefHeight="27.0" prefWidth="68.0" text="POS ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="55.0" prefHeight="27.0" prefWidth="87.0" text="Cashier Name:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="1.0" prefHeight="27.0" prefWidth="79.0" text="Cashier Code:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="casherCode" layoutX="13.0" layoutY="28.0" prefHeight="27.0" prefWidth="161.0" text="01" />
+            <Label fx:id="casherName" layoutX="13.0" layoutY="82.0" prefHeight="27.0" prefWidth="161.0" text="moazzam" />
+            <Label fx:id="PosID" layoutX="17.0" layoutY="136.0" prefHeight="27.0" prefWidth="161.0" text="pos_001" />
+            <Separator layoutX="7.0" layoutY="-2.0" prefHeight="3.0" prefWidth="221.0" />
+            <Label layoutX="14.0" layoutY="157.0" prefHeight="27.0" prefWidth="68.0" text="UAN #">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="uan" layoutX="13.0" layoutY="188.0" prefHeight="27.0" prefWidth="161.0" />
+            <Label layoutX="14.0" layoutY="215.0" prefHeight="27.0" prefWidth="68.0" text="Gst #">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="gst" layoutX="13.0" layoutY="242.0" prefHeight="27.0" prefWidth="161.0" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="14.0" layoutY="372.0" prefHeight="3.0" prefWidth="221.0" />
+      <Label fx:id="gross" layoutX="589.0" layoutY="412.0" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: silver;" text="0" />
+      <Label layoutX="514.0" layoutY="413.0" prefHeight="27.0" prefWidth="53.0" text="Gross:" />
+      <Label layoutX="507.0" layoutY="454.0" prefHeight="27.0" prefWidth="68.0" text="Discount %" />
+      <Label fx:id="discount" layoutX="632.0" layoutY="454.0" prefHeight="27.0" prefWidth="103.0" style="-fx-background-color: silver;" text="0" />
+      <JFXTextField fx:id="Percentdiscount" layoutX="577.0" layoutY="455.0" prefHeight="25.0" prefWidth="45.0" text="0" />
+      <Label layoutX="508.0" layoutY="500.0" prefHeight="27.0" prefWidth="65.0" text="Net Bill:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="netBill" layoutX="592.0" layoutY="500.0" prefHeight="27.0" prefWidth="98.0" style="-fx-background-color: silver;" text="0" />
+      <JFXTextField fx:id="searchByItems" labelFloat="true" layoutX="995.0" layoutY="47.0" onAction="#getSearchItem" prefHeight="25.0" prefWidth="170.0" promptText="Product Name" />
+      <Label layoutX="906.0" layoutY="47.0" prefHeight="25.0" prefWidth="87.0" text="Search By Items:" />
+      <Label layoutX="15.0" layoutY="426.0" prefHeight="25.0" prefWidth="103.0" text="Time:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="394.0" prefHeight="25.0" prefWidth="103.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="currenttime" layoutX="106.0" layoutY="426.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="currentdate" layoutX="106.0" layoutY="394.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="14.0" layoutY="373.0" prefHeight="27.0" prefWidth="68.0" text="Invoice No:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="invoice" layoutX="106.0" layoutY="373.0" prefHeight="27.0" prefWidth="149.0" />
+      <Separator layoutX="18.0" layoutY="450.0" prefHeight="3.0" prefWidth="212.0" />
+      <JFXTextField fx:id="searchByID" editable="false" labelFloat="true" layoutX="827.0" layoutY="47.0" onAction="#getSearchItemByID" prefHeight="25.0" prefWidth="79.0" promptText="Product ID" />
+      <Label layoutX="748.0" layoutY="47.0" prefHeight="25.0" prefWidth="79.0" text="Search By ID:" />
+      <ScrollPane layoutX="264.0" layoutY="82.0" prefHeight="315.0" prefWidth="466.0">
+         <content>
+            <TableView fx:id="productSalesEntryTableView" prefHeight="316.0" prefWidth="455.0">
+               <columns>
+                  <TableColumn fx:id="pSerial" editable="false" prefWidth="75.0" text="Serial No" />
+                  <TableColumn fx:id="pName" editable="false" prefWidth="95.0" text="Product Name" />
+                  <TableColumn fx:id="pQty" prefWidth="95.0" text="Quantity" />
+                  <TableColumn fx:id="pRate" editable="false" prefWidth="95.0" text="Rate" />
+                  <TableColumn fx:id="pAmount" prefWidth="95.0" text="Amount" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXTextField fx:id="ItemQuantity" labelFloat="true" layoutX="995.0" layoutY="426.0" promptText="Items Quantity" />
+      <Label layoutX="839.0" layoutY="428.0" prefHeight="25.0" prefWidth="135.0" text="Quantity of Items:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="paidamount" layoutX="707.0" layoutY="497.0" prefHeight="27.0" prefWidth="79.0" text="Paid Amount:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="887.0" layoutY="501.0" prefHeight="25.0" prefWidth="98.0" text="Balance :" />
+      <JFXTextField fx:id="paid_amount" layoutX="788.0" layoutY="501.0" prefHeight="25.0" prefWidth="88.0" promptText="Amount Paid" text="0" />
+      <Label fx:id="due" layoutX="971.0" layoutY="505.0" prefHeight="25.0" prefWidth="79.0" text="0" />
+   </children>
+</AnchorPane>
